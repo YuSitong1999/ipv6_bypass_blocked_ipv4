@@ -19,6 +19,21 @@
 测试环境：国科大图书馆二楼机房
 测试结果：未登录校园网账号，ipv6-test.com网站给出的v4和v6的ip均为远端服务器，且谷歌，B站等网站均能正常使用，速度接近500Mb/s。
 
+## 环境测试（网络环境必须满足该条件）
+
+### 电脑环境必须满足此条件，不然很可能使用失败（推荐有线网络）
+
+未登录ucas校园网时，打开[https://ipv6-test.com/](https://ipv6-test.com/)
+
+需要满足以下条件
+
+- 无IPV4信息，即不登录校园网的情况下不支持IPV4网络
+- 有IPV6信息，即不登录校园网的情况下也支持IPV6网络
+
+只有满足该条件，才证明你的网络情况支持IPV6代理绕过校园网认证。
+
+![校园网未登录ipv6-test结果](./images/校园网未登录ipv6-test结果.png)
+
 ## 第一步.购买一台购买一台境外服务器（需有IPV6地址，这点非常重要）
 
 ### 1.注册[Vultr](https://www.vultr.com/?ref=7407281)账号
@@ -168,6 +183,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 ![内网代理](./images/内网代理.png)
 
 ### 自此，退出校园网登录后，谷歌、B站等网页也可以正常使用
+
+### 此时打开[https://ipv6-test.com/](https://ipv6-test.com/)，应该显示为下图情况
+
+![代理后ipv6-test结果](./images/代理后ipv6-test结果.png)
 
 ## 第四步.软件配置
 
